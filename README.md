@@ -1,1 +1,1 @@
-### [главная](https://efekta.github.io/GB/)
+### [главная](https://efekta.github.io/GB/build/index.html)
