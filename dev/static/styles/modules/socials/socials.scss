@@ -1,0 +1,16 @@
+.socials-list {
+	position: fixed;
+	right: 29px;
+	bottom: 35px;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	&__item {
+		margin: 5px 0;
+		text-align: center;
+	}
+	&__link {
+		color: #fff;
+		font-size: 24px;
+	}
+}

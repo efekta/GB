@@ -1,0 +1,42 @@
+.pagination {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	padding-top: 138px;
+	padding-left: 25px;
+	// top: 138px;
+	// left: 25px;
+	// width: 75px;
+	height: 100%;
+	z-index: 1;
+}
+.pagination-list {
+	width: 4px;
+	height: 100%;
+	margin-left: auto;
+	background: rgb(255,255,255);
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0.10196) 79%, rgba(255,255,255,0.1) 80%, rgba(255,255,255,0) 100%);
+	background: -o-linear-gradient(left, rgba(255,255,255,0.10196) 79%, rgba(255,255,255,0.1) 80%, rgba(255,255,255,0) 100%);
+	background: linear-gradient(to top, rgba(255,255,255,0.10196) 79%, rgba(255,255,255,0.1) 80%, rgba(255,255,255,0) 100%);
+}
+.pagination-list__item {
+	width: 4px;
+	height: 12.8%;
+}
+.pagination-list__item.active {
+	background: rgb(48,26,238);
+	background: -webkit-linear-gradient(left, rgba(48,26,238,1) 0%, rgba(48,26,238,0.30196) 100%);
+	background: -o-linear-gradient(left, rgba(48,26,238,1) 0%, rgba(48,26,238,0.30196) 100%);
+	background: linear-gradient(to top, rgba(48,26,238,1) 0%, rgba(48,26,238,0.30196) 100%);
+}
+.pagination-nav__item {
+	text-align: center;
+	margin: 15px;
+}
+.pagination-nav__link {
+	color: rgba(255,255,255,0.5);
+	font-size: 18px;
+}
+.pagination-count {
+	color: #301aee;
+}
