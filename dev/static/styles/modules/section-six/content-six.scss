@@ -1,4 +1,4 @@
-.content-one-wrapp {
+.content-six {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -8,21 +8,16 @@
 	display: flex;
     justify-content: center;
     align-items: center;
+	.title {
+		margin-bottom: 70px;
+	}
 }
-.content-one {
+.content-six__wrapp {
 	width: 70%;
-	text-align: center;
-	color: #fff;
-	text-transform: uppercase;
 }
-
-.content-one__subtitle {
-	display: inline-block;
-	padding: 0 5px;
-	font-size: 38px;
-	background: #301aee;
-}
-.content-one__title {
-	display: inline-block;
-	font-size: 100px;
+.content-six__list {
+	li {
+		font-size: 30px;
+		margin-bottom: 40px;
+	}
 }
