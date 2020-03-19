@@ -19,5 +19,17 @@
 	li {
 		font-size: 30px;
 		margin-bottom: 40px;
+		position: relative;
+		padding-left: 40px;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 40px;
+			height: 40px;
+			background: url('/static/images/general/a_1.png') no-repeat center;
+			//transform: translateY(-50%);
+		}
 	}
 }
