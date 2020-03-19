@@ -1118,9 +1118,6 @@ section {
   right: 0;
   bottom: 0;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 .content-four .title {
   margin-bottom: 45px;
@@ -1138,6 +1135,30 @@ section {
 }
 .content-four__link:hover {
   border-bottom: 2px solid #1c0bb0;
+}
+
+.courusel-project {
+  display: flex;
+  justify-content: space-between;
+}
+
+.courusel-project__item {
+  margin-left: 15px;
+}
+
+.project-pic {
+  position: relative;
+}
+.project-pic:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translateY(-50%);
+  background-image: url("../images/general/youtube_slider_icon.png");
+  z-index: 4;
 }
 
 .content-five {

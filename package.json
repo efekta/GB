@@ -35,6 +35,7 @@
     "jquery-scrollify": "^1.0.20",
     "normalize.css": "^8.0.1",
     "onepage-scroll": "^1.3.0",
+    "owl.carousel": "^2.3.4",
     "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.1.9"
   },
