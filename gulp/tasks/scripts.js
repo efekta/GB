@@ -11,6 +11,7 @@ module.exports = function () {
         return $.gulp.src([
             'node_modules/svg4everybody/dist/svg4everybody.min.js',
             'node_modules/jquery-scrollify/jquery.scrollify.js',
+            'node_modules/slick-carousel/slick/slick.js',
             'dev/libs/fontawesome/svg-with-js/js/fontawesome-all.js',
             // 'dev/libs/slick/slick-carousel/slick/slick.min.js'
             ])
@@ -22,6 +23,7 @@ module.exports = function () {
         return $.gulp.src([
             'node_modules/svg4everybody/dist/svg4everybody.min.js',
             'node_modules/jquery-scrollify/jquery.scrollify.js',
+            'node_modules/slick-carousel/slick/slick.js',
             'dev/libs/fontawesome/svg-with-js/js/fontawesome-all.js',
             // 'dev/libs/slick/slick-carousel/slick/slick.min.js'
             ])
