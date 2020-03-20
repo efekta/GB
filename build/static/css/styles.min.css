@@ -713,9 +713,9 @@ a {
     max-width: 1572px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1360px) {
   .container {
-    max-width: 1170px;
+    max-width: 1290px;
   }
 }
 
@@ -771,6 +771,13 @@ video {
 
 section {
   min-height: 700px;
+}
+
+a,
+button,
+textarea,
+input {
+  outline: none;
 }
 
 .pagination {
@@ -1258,4 +1265,178 @@ section {
   justify-content: center;
   align-items: center;
   float: none;
+}
+
+.content-eight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-eight-wrapp {
+  display: flex;
+}
+
+.content-contacts {
+  width: 45%;
+}
+.content-contacts .title {
+  margin-bottom: 45px;
+}
+.content-contacts .desc {
+  font-size: 40px;
+  margin-bottom: 70px;
+}
+
+.contacts-list a {
+  margin-left: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contacts-list a.whatsapp img {
+  width: 28px;
+  height: 28px;
+}
+
+.contacts-list a.telegram img {
+  width: 31px;
+  height: 26px;
+}
+
+.contacts-list a.phone {
+  color: #ffffff;
+  font-size: 35px;
+  letter-spacing: 10px;
+}
+
+.contacts-form {
+  width: 55%;
+}
+
+.contacts-form-box {
+  border: 2px solid #301aee;
+}
+
+.contacts-form-wrapp {
+  border-bottom: 2px solid #301aee;
+}
+
+.contacts-form-wrapp-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts-form-wrapp-flex .contacts-form__item {
+  width: 50%;
+}
+
+.contacts-form__item {
+  padding: 25px;
+  cursor: pointer;
+}
+.contacts-form__item input,
+.contacts-form__item textarea {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: left;
+  width: 100%;
+}
+.contacts-form__item textarea {
+  width: 100%;
+  min-height: 80px;
+}
+.contacts-form__item label {
+  font-size: 16px;
+  position: relative;
+  padding-left: 45px;
+}
+
+.contacts-form-wrapp-border_none {
+  border: none;
+}
+
+input[placeholder] {
+  color: #9c93a8;
+  font-size: 16px;
+}
+
+input::-webkit-input-placeholder {
+  color: #9c93a8;
+  font-size: 16px;
+}
+
+input::-moz-placeholder {
+  color: #9c93a8;
+  font-size: 16px;
+}
+
+/* Firefox 19+ */
+input:-moz-placeholder {
+  color: #9c93a8;
+  font-size: 16px;
+}
+
+/* Firefox 18- */
+input:-ms-input-placeholder {
+  color: #9c93a8;
+  font-size: 16px;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: url("/static/images/general/checkbox.png") no-repeat;
+}
+
+input[type="checkbox"]:checked + label::before {
+  background: url("/static/images/general/checkbox_checked.png") no-repeat;
+}
+
+.btn--contacts {
+  width: 100%;
+  background: #ff0000;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 17px;
+}
+
+.contacts-form__item--custom {
+  padding: 20px 0;
+}
+
+.purpur {
+  color: #301aee;
+}
+
+.policy {
+  display: inline-block;
+  color: #301aee;
+}
+.policy:hover {
+  color: #5a46ff;
+  text-decoration: underline;
 }
