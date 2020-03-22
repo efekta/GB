@@ -1,0 +1,21 @@
+.form-wrapp {
+  position: fixed;
+  right: 0;
+  width: 710px;
+  height: 100vh;
+  min-height: 700px;
+  padding: 0 35px;
+  background: #130133;
+  z-index: 4;
+  overflow-y: scroll;
+}
+.box-form {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.title-form {
+  text-transform: uppercase;
+  font-size: 38px;
+  margin-bottom: 35px;
+}

@@ -1,5 +1,9 @@
+.site-wrapp {
+	display: flex;
+}
 .wrapper {
 	position: relative;
+	width: calc(100% - 710px);
 }
 .title {
 	display: inline-block;

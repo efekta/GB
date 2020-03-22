@@ -660,17 +660,6 @@ select {
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    -webkit-animation-duration: .01ms !important;
-            animation-duration: .01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 audio,
 canvas,
 iframe,
@@ -723,8 +712,13 @@ video {
   outline: none;
 }
 
+.site-wrapp {
+  display: flex;
+}
+
 .wrapper {
   position: relative;
+  width: calc(100% - 710px);
 }
 
 .title {
@@ -778,6 +772,30 @@ button,
 textarea,
 input {
   outline: none;
+}
+
+.form-wrapp {
+  position: fixed;
+  right: 0;
+  width: 710px;
+  height: 100vh;
+  min-height: 700px;
+  padding: 0 35px;
+  background: #130133;
+  z-index: 4;
+  overflow-y: scroll;
+}
+
+.box-form {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.title-form {
+  text-transform: uppercase;
+  font-size: 38px;
+  margin-bottom: 35px;
 }
 
 .pagination {
@@ -1356,7 +1374,7 @@ input {
 .contacts-form__item label {
   font-size: 16px;
   position: relative;
-  padding-left: 45px;
+  padding-left: 35px;
 }
 
 .contacts-form-wrapp-border_none {
