@@ -1,14 +1,13 @@
 "use strict";
 
 $(document).ready(function () {
-  svg4everybody({}); // let $status = $('.pagingInfo');
-  // let $slickElement = $('.courusel-project');
-  //
-  // $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-  //     let i = (currentSlide ? currentSlide : 0) + 1;
-  //     $status.text(i + ' из ' + slick.slideCount);
-  // });
-
+  svg4everybody({});
+  var $status = $('.pagingInfo');
+  var $slickElement = $('.courusel-project');
+  $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+    var i = (currentSlide ? currentSlide : 0) + 1;
+    $status.text(i + ' из ' + slick.slideCount);
+  });
   var $statusCourusel = $('.pagingInfo-courusel');
   var $slickElementCourusel = $('.courusel');
   $slickElementCourusel.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
@@ -109,7 +108,7 @@ $(document).ready(function () {
   });
 }); // form modal
 
-$('.contact').on('click', function () {
+$('.contact').on('click', function (event) {
   event.preventDefault();
   $('.site-wrapp').addClass('open');
 });

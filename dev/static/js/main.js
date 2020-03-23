@@ -1,13 +1,13 @@
 $(document).ready(function () {
     svg4everybody({});
 
-    // let $status = $('.pagingInfo');
-    // let $slickElement = $('.courusel-project');
-    //
-    // $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-    //     let i = (currentSlide ? currentSlide : 0) + 1;
-    //     $status.text(i + ' из ' + slick.slideCount);
-    // });
+    let $status = $('.pagingInfo');
+    let $slickElement = $('.courusel-project');
+
+    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        let i = (currentSlide ? currentSlide : 0) + 1;
+        $status.text(i + ' из ' + slick.slideCount);
+    });
 
     let $statusCourusel = $('.pagingInfo-courusel');
     let $slickElementCourusel = $('.courusel');
@@ -125,7 +125,7 @@ $(document).ready(function () {
 });
 
     // form modal
-    $('.contact').on('click', function(){
+    $('.contact').on('click', function(event){
         event.preventDefault();
         $('.site-wrapp').addClass('open')
     })
