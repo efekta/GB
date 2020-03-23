@@ -13,6 +13,7 @@ module.exports = function () {
             'node_modules/jquery-scrollify/jquery.scrollify.js',
             // 'node_modules/owl.carousel/dist/owl.carousel.min.js',
             'node_modules/slick-carousel/slick/slick.js',
+            // 'dev/libs/slick/slick.js',
             'dev/libs/fontawesome/svg-with-js/js/fontawesome-all.js'
             ])
             .pipe(concat('libs.min.js'))
@@ -25,6 +26,7 @@ module.exports = function () {
             'node_modules/jquery-scrollify/jquery.scrollify.js',
             // 'node_modules/owl.carousel/dist/owl.carousel.min.js',
             'node_modules/slick-carousel/slick/slick.js',
+            // 'dev/libs/slick/slick.js',
             'dev/libs/fontawesome/svg-with-js/js/fontawesome-all.js'
             ])
             .pipe(concat('libs.min.js'))

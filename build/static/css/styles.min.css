@@ -781,6 +781,43 @@ input {
   outline: none;
 }
 
+.slick-slider {
+  padding-top: 50px;
+  margin-top: -12px;
+}
+
+.slick-arrow {
+  top: 0;
+}
+
+.slick-prev,
+.slick-next {
+  color: #301aee;
+  font-size: 38px;
+  font-weight: bold;
+}
+.slick-prev:hover,
+.slick-next:hover {
+  color: #ffffff;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 88%;
+}
+
+.pagingInfo,
+.pagingInfo-courusel {
+  display: inline-block;
+  padding-left: 45px;
+  font-size: 18px;
+  color: #301aee;
+  text-transform: uppercase;
+}
+
 .form-wrapp {
   position: fixed;
   right: 0;
