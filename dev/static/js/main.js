@@ -104,7 +104,14 @@ $(document).ready(function () {
 
 });
 
-
+    // form modal
+    $('.contact').on('click', function(){
+        event.preventDefault();
+        $('.site-wrapp').addClass('open')
+    })
+    $('.form-close-wrapp').on('click', function(){
+        $('.site-wrapp').removeClass('open')
+    })
 // Полифилы
 
 // forEach IE 11

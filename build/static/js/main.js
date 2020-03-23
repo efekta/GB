@@ -90,6 +90,14 @@ $(document).ready(function () {
   $('.video-close').on('click', function () {
     $('.box-video').removeClass('show');
   });
+}); // form modal
+
+$('.contact').on('click', function () {
+  event.preventDefault();
+  $('.site-wrapp').addClass('open');
+});
+$('.form-close-wrapp').on('click', function () {
+  $('.site-wrapp').removeClass('open');
 }); // Полифилы
 // forEach IE 11
 

@@ -1,21 +1,62 @@
 .form-wrapp {
   position: fixed;
   right: 0;
-  width: 710px;
+  width: 700px;
   height: 100vh;
   min-height: 700px;
-  padding: 0 35px;
   background: #130133;
   z-index: 4;
-  overflow-y: scroll;
+  //transform: translateX(150%);
+  transform: translateX(850px);
+  transition: transform 0.7s cubic-bezier(0.29, 0, 0.355, 1), -webkit-transform 0.7s cubic-bezier(0.29, 0, 0.355, 1), -moz-transform 0.7s cubic-bezier(0.29, 0, 0.355, 1), -o-transform 0.7s cubic-bezier(0.29, 0, 0.355, 1)
 }
 .box-form {
+  position: relative;
   display: flex;
   align-items: center;
   height: 100%;
+  padding: 0 35px;
 }
 .title-form {
   text-transform: uppercase;
   font-size: 38px;
   margin-bottom: 35px;
+}
+.form-close-wrapp {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  z-index: 4;
+}
+.form-close {
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  color: #fff;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  svg {
+    transition: all .5s;
+  }
+}
+
+.form-close-text {
+  position: absolute;
+  top: 50px;
+  right: 15px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #fff;
+  transform: rotate(-90deg);
+  transform-origin: right bottom;
+  cursor: pointer;
+}
+
+.form-close-wrapp:hover {
+  .form-close svg {
+    transform: rotate(180deg);
+  }
 }
