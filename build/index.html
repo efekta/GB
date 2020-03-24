@@ -192,41 +192,41 @@
                     <div class="contacts-list"><a class="whatsapp" href=""><img src="static/images/general/whatsapp.png"></a><a class="telegram" href=""><img src="static/images/general/telegram.png"></a><a class="phone" href="tel:+79181634574"><span>8-918-163-45-74</span></a></div>
                   </div>
                   <div class="contacts-form">
-                    <form action="" method="POST" autocomplete="new-password">
+                    <form class="form-end-page" autocomplete="new-password">
                       <div class="contacts-form-box">
                         <div class="contacts-form-wrapp">
                           <div class="contacts-form__item">
-                            <input type="checkbox" checked id="check">
-                            <label for="check">Рекламная интеграция на YouTube</label>
+                            <input type="radio" name="reason" id="integration" aria-valuetext="Рекламная интеграция на YouTube">
+                            <label for="integration">Рекламная интеграция на YouTube</label>
                           </div>
                           <div class="contacts-form__item">
-                            <input type="checkbox" id="check1">
-                            <label for="check1">Рекламный ролик</label>
+                            <input type="radio" name="reason" id="movie" aria-valuetext="Рекламный ролик">
+                            <label for="movie">Рекламный ролик</label>
                           </div>
                           <div class="contacts-form__item">
-                            <input type="checkbox" id="check2">
-                            <label for="check2">Другой вопрос</label>
+                            <input type="radio" checked name="reason" id="other" aria-valuetext="Другой вопрос">
+                            <label for="other">Другой вопрос</label>
                           </div>
                         </div>
                         <div class="contacts-form-wrapp">
                           <div class="contacts-form__item">
-                            <input type="text" placeholder="Имя" autocomplete="new-password">
+                            <input type="text" placeholder="Имя" id="name" autocomplete="new-password">
                             <!--label(for="") Имя-->
                           </div>
                         </div>
                         <div class="contacts-form-wrapp contacts-form-wrapp-flex">
                           <div class="contacts-form__item">
-                            <input type="tel" placeholder="Телефон" autocomplete="new-password">
+                            <input type="tel" placeholder="Телефон" id="phone" autocomplete="new-password">
                             <!--label(for="") Телефон-->
                           </div>
                           <div class="contacts-form__item">
-                            <input type="email" placeholder="E-mail" autocomplete="new-password">
+                            <input type="email" placeholder="E-mail" id="email" autocomplete="new-password">
                             <!--label(for="") E-mail-->
                           </div>
                         </div>
                         <div class="contacts-form-wrapp contacts-form-wrapp-border_none">
                           <div class="contacts-form__item">
-                            <textarea placeholder="Комментарий"></textarea>
+                            <textarea placeholder="Комментарий" id="text"></textarea>
                           </div>
                         </div>
                       </div>

@@ -1,6 +1,27 @@
 $(document).ready(function () {
     svg4everybody({});
 
+    $('.form-end-page').submit((e) => {
+        e.preventDefault()
+
+        let data = {}
+        for (let item of e.target.elements) {
+            if (item.type !== 'radio' && item.type !== 'submit' && item.type !== 'checkbox') {
+                data[item.id] = $(item).val()
+            } else {
+                if (item.checked) {
+                    data.reason = item.attributes['aria-valuetext'].value
+                }
+            }
+        }
+        console.log(data)
+        // $.ajax({
+        //     type: 'POST',
+        //     url: 'index.php',
+        //     data
+        // })
+    })
+
     let $status = $('.pagingInfo');
     let $slickElement = $('.courusel-project');
 

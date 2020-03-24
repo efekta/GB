@@ -12,32 +12,32 @@
                     a.phone(href="tel:+79181634574")
                         span 8-918-163-45-74
             .contacts-form
-                form(action="", method="POST", autocomplete="new-password")
+                form.form-end-page(autocomplete="new-password")
                     .contacts-form-box
                         .contacts-form-wrapp
                             .contacts-form__item
-                                input(type="checkbox", checked, id="check")
-                                label(for="check") Рекламная интеграция на YouTube
+                                input(type="radio", name="reason" id="integration" aria-valuetext="Рекламная интеграция на YouTube")
+                                label(for="integration") Рекламная интеграция на YouTube
                             .contacts-form__item
-                                input(type="checkbox", id="check1")
-                                label(for="check1") Рекламный ролик
+                                input(type="radio", name="reason" id="movie" aria-valuetext="Рекламный ролик")
+                                label(for="movie") Рекламный ролик
                             .contacts-form__item
-                                input(type="checkbox", id="check2")
-                                label(for="check2") Другой вопрос
+                                input(type="radio", checked, name="reason" id="other" aria-valuetext="Другой вопрос")
+                                label(for="other") Другой вопрос
                         .contacts-form-wrapp
                             .contacts-form__item
-                                input(type="text", placeholder="Имя", autocomplete="new-password")
+                                input(type="text", placeholder="Имя", id="name" autocomplete="new-password")
                                 //label(for="") Имя
                         .contacts-form-wrapp.contacts-form-wrapp-flex
                             .contacts-form__item
-                                input(type="tel", placeholder="Телефон", autocomplete="new-password")
+                                input(type="tel", placeholder="Телефон", id="phone", autocomplete="new-password")
                                 //label(for="") Телефон
                             .contacts-form__item
-                                input(type="email", placeholder="E-mail", autocomplete="new-password")
+                                input(type="email", placeholder="E-mail", id="email", autocomplete="new-password")
                                 //label(for="") E-mail
                         .contacts-form-wrapp.contacts-form-wrapp-border_none
                             .contacts-form__item
-                                textarea(placeholder="Комментарий")
+                                textarea(placeholder="Комментарий", id="text")
                     .contacts-form-wrapp.contacts-form-wrapp-flex.contacts-form-wrapp-border_none
                         .contacts-form__item.contacts-form__item--custom
                             button.btn.btn--contacts(type="submit") отправить
