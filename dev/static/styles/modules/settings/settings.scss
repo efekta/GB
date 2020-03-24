@@ -78,6 +78,18 @@ section {
 a, button, textarea, input {
 	outline: none;
 }
+
+.slick-track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slick-initialized .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: none;
+}
 .slick-slider {
 	padding-top: 50px;
 	margin-top: -12px;

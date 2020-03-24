@@ -1,45 +1,14 @@
 .pagination
 	ul.pagination-nav
-		li.pagination-nav__item
+		li.pagination-nav__item.prev
 			a.pagination-nav__link(href="")
 				i.fal.fa-chevron-up
 		li.pagination-nav__item
 			a.pagination-nav__link.pagination-count(href="")
-				span 1
-		li.pagination-nav__item
+				span.count-slider 1
+		li.pagination-nav__item.next
 			a.pagination-nav__link(href="")
 				i.fal.fa-chevron-down
-	//- ul.pagination-count
-	//- 	li.pagination-count__item
-	//- 		span 1
-	//- 	li.pagination-count__item
-	//- 		span 2
-	//- 	li.pagination-count__item
-	//- 		span 3
-	//- 	li.pagination-count__item
-	//- 		span 4
-	//- 	li.pagination-count__item
-	//- 		span 5
-	//- 	li.pagination-count__item
-	//- 		span 6
-	//- 	li.pagination-count__item
-	//- 		span 7
-	//- 	li.pagination-count__item
-	//- 		span 8
-	ul.pagination-list
-		li.pagination-list__item.active
-			a.pagination-list__link(href="")
-		li.pagination-list__item
-			a.pagination-list__link(href="")
-		li.pagination-list__item
-			a.pagination-list__link(href="")
-		li.pagination-list__item
-			a.pagination-list__link(href="")
-		li.pagination-list__item
-			a.pagination-list__link(href="")
-		li.pagination-list__item
-			a.pagination-list__link(href="")
-		li.pagination-list__item
-			a.pagination-list__link(href="")
-		li.pagination-list__item
-			a.pagination-list__link(href="")
+	.pagination-list
+		a.pagination-list__item.active
+			span.pagination-list__link

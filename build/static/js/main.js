@@ -94,10 +94,34 @@ $(document).ready(function () {
     overflowScroll: true,
     updateHash: true,
     touchScroll: true,
+    // start custom properties
+    heightPaginationString: $('.pagination-list__item.active').height(),
+    // end custom properties
     before: function before() {},
-    after: function after() {},
+    after: function after() {
+      var _this = this;
+
+      var heightSection = $('.section').height();
+      var scrollPosition = $(window).scrollTop(); // increase num pagination
+
+      $('.count-slider').text(function () {
+        return Math.round(scrollPosition / Number(heightSection) + 1);
+      }); // increase height pagination string
+
+      $('.pagination-list__item.active').height(function () {
+        return _this.heightPaginationString * (scrollPosition / Number(heightSection) + 1);
+      });
+    },
     afterResize: function afterResize() {},
     afterRender: function afterRender() {}
+  });
+  $('.pagination-nav__item.prev').on('click', function (event) {
+    event.preventDefault();
+    $.scrollify.previous();
+  });
+  $('.pagination-nav__item.next').on('click', function (event) {
+    event.preventDefault();
+    $.scrollify.next();
   }); // video
 
   $('.btn-video').on('click', function () {
@@ -106,7 +130,8 @@ $(document).ready(function () {
   $('.video-close').on('click', function () {
     $('.box-video').removeClass('show');
   });
-}); // form modal
+}); // end ready
+// form modal
 
 $('.contact').on('click', function (event) {
   event.preventDefault();

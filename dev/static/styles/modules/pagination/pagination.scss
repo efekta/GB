@@ -4,11 +4,8 @@
 	align-items: center;
 	padding-top: 138px;
 	padding-left: 25px;
-	// top: 138px;
-	// left: 25px;
-	// width: 75px;
 	height: 100%;
-	z-index: 1;
+	z-index: 4;
 }
 .pagination-list {
 	width: 4px;
@@ -28,6 +25,7 @@
 	background: -webkit-linear-gradient(left, rgba(48,26,238,1) 0%, rgba(48,26,238,0.30196) 100%);
 	background: -o-linear-gradient(left, rgba(48,26,238,1) 0%, rgba(48,26,238,0.30196) 100%);
 	background: linear-gradient(to top, rgba(48,26,238,1) 0%, rgba(48,26,238,0.30196) 100%);
+	transition: transform 0.7s cubic-bezier(0.29, 0, 0.355, 1), -webkit-transform 0.7s cubic-bezier(0.29, 0, 0.355, 1), -moz-transform 0.7s cubic-bezier(0.29, 0, 0.355, 1), -o-transform 0.7s cubic-bezier(0.29, 0, 0.355, 1)
 }
 .pagination-nav__item {
 	text-align: center;

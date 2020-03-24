@@ -52,7 +52,6 @@ $(document).ready(function () {
         ]
     });
 
-
     $('.courusel-project').slick({
         dots: false,
         arrow: true,
@@ -89,30 +88,54 @@ $(document).ready(function () {
     });
     // Scrollify
     $(function() {
-      $.scrollify({
-        section : ".section",
-      });
+        $.scrollify({
+            section : ".section",
+        });
     });
     $.scrollify({
-    section : ".section",
-    sectionName : "section-name",
-    interstitialSection : "",
-    easing: "easeOutExpo",
-    scrollSpeed: 800,
-    offset : 0,
-    scrollbars: true,
-    standardScrollElements: "",
-    setHeights: true,
-    overflowScroll: true,
-    updateHash: true,
-    touchScroll:true,
-    before:function() {
-        
-    },
-    after:function() {},
-    afterResize:function() {},
-    afterRender:function() {}
-  });
+        section : ".section",
+        sectionName : "section-name",
+        interstitialSection : "",
+        easing: "easeOutExpo",
+        scrollSpeed: 800,
+        offset : 0,
+        scrollbars: true,
+        standardScrollElements: "",
+        setHeights: true,
+        overflowScroll: true,
+        updateHash: true,
+        touchScroll:true,
+        // start custom properties
+        heightPaginationString: $('.pagination-list__item.active').height(),
+        // end custom properties
+        before:function() {},
+        after:function() {
+            const heightSection = $('.section').height();
+            const scrollPosition = $(window).scrollTop();
+
+            // increase num pagination
+            $('.count-slider').text(() => {
+                return Math.round(scrollPosition / Number(heightSection) + 1)
+            })
+
+            // increase height pagination string
+            $('.pagination-list__item.active').height(() => {
+                return this.heightPaginationString * (scrollPosition / Number(heightSection) + 1)
+            })
+        },
+        afterResize:function() {},
+        afterRender:function() {}
+    });
+
+    $('.pagination-nav__item.prev').on('click', (event) => {
+        event.preventDefault()
+        $.scrollify.previous();
+    })
+
+    $('.pagination-nav__item.next').on('click', (event) => {
+        event.preventDefault()
+        $.scrollify.next();
+    })
 
     // video
     $('.btn-video').on('click', function(){
@@ -123,15 +146,16 @@ $(document).ready(function () {
     })
 
 });
+// end ready
 
-    // form modal
-    $('.contact').on('click', function(event){
-        event.preventDefault();
-        $('.site-wrapp').addClass('open')
-    })
-    $('.form-close-wrapp').on('click', function(){
-        $('.site-wrapp').removeClass('open')
-    })
+// form modal
+$('.contact').on('click', function(event){
+    event.preventDefault();
+    $('.site-wrapp').addClass('open')
+})
+$('.form-close-wrapp').on('click', function(){
+    $('.site-wrapp').removeClass('open')
+})
 // Полифилы
 
 // forEach IE 11
