@@ -19,7 +19,7 @@
 	display: inline-block;
 	padding: 0 5px;
 	color: #fff;
-	font-size: 36px;
+	font-size: 35px;
 	text-transform: uppercase;
 	background: #301aee;
 }
@@ -41,7 +41,7 @@
 	    height: 100%;
 	    top: 0;
 	    left: 0;
-	    z-index: -1;
+	    z-index: 1;
 	    // position: absolute;
 	    // top: 0;
 	    // left: 0;
@@ -61,6 +61,7 @@
 	height: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 }
 .btn {
 	background: transparent;
@@ -110,7 +111,7 @@ a, button, textarea, input {
 }
 
 .slick-next {
-	right: 88%;
+	right: 85%;
 }
 
 .pagingInfo, .pagingInfo-courusel {
@@ -119,4 +120,12 @@ a, button, textarea, input {
 	font-size: 18px;
 	color: #301aee;
 	text-transform: uppercase;
+}
+.section {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.section-two {
+	background-image: url("/static/images/content/bg-two.jpg");
 }

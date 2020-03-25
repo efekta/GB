@@ -4,7 +4,7 @@
 	bottom: 35px;
 	display: flex;
 	flex-direction: column;
-	z-index: 1;
+	z-index: 4;
 	&__item {
 		margin: 5px 0;
 		text-align: center;
@@ -12,5 +12,31 @@
 	&__link {
 		color: #fff;
 		font-size: 24px;
+	}
+}
+
+.facebook:hover {
+	svg {
+		color: #1c0bb0;
+	}
+}
+.telegram:hover {
+	svg {
+		color: #1F4EB0;
+	}
+}
+.vk:hover {
+	svg {
+		color: #301aee;
+	}
+}
+.youtube:hover {
+	svg {
+		color: #B01709;
+	}
+}
+.instagram:hover {
+	svg {
+		color: #B01AAA;
 	}
 }
