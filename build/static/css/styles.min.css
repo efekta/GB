@@ -1350,14 +1350,12 @@ input {
   position: relative;
   padding-left: 40px;
 }
-.content-six__list li:before {
-  content: "";
+.content-six__list li span {
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 0;
   width: 40px;
   height: 40px;
-  background: url("/static/images/general/a_1.png") no-repeat center;
 }
 
 .content-seven {
@@ -1401,6 +1399,8 @@ input {
 
 .content-eight-wrapp {
   display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .content-contacts {
@@ -1454,13 +1454,13 @@ input {
 .contacts-form-wrapp-flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .contacts-form-wrapp-flex .contacts-form__item {
   width: 50%;
 }
 
 .contacts-form__item {
-  display: flex;
   padding: 25px;
   cursor: pointer;
 }
@@ -1514,6 +1514,17 @@ input:-ms-input-placeholder {
   font-size: 16px;
 }
 
+input[type="radio"] {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+
 input[type="checkbox"] {
   position: relative;
   width: 20px;
@@ -1525,18 +1536,32 @@ input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"] + label::before {
-  content: "";
+.ico-input {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
-  background: url("/static/images/general/checkbox.png") no-repeat;
+  width: 20px;
+  height: 20px;
 }
 
-input[type="checkbox"]:checked + label::before {
-  background: url("/static/images/general/checkbox_checked.png") no-repeat;
+.ico-input .ico-input-checked {
+  display: none;
+}
+
+input[type="radio"]:checked + label .ico-input .ico-input-check {
+  display: none;
+}
+
+input[type="radio"]:checked + label .ico-input .ico-input-checked {
+  display: block;
+}
+
+input[type="checkbox"]:checked + label .ico-input .ico-input-check {
+  display: none;
+}
+
+input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
+  display: block;
 }
 
 .btn--contacts {
@@ -1820,10 +1845,6 @@ input[type="checkbox"]:checked + label::before {
   .box-form {
     align-items: flex-start;
     padding: 0 20px;
-  }
-  .box-form__content {
-    height: 640px;
-    overflow-y: scroll;
   }
   .site-wrapp.open .wrapper {
     transform: translateX(0);
