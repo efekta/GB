@@ -34,7 +34,7 @@ const sendEmail = (options) => {
     })
 }
 
-app.post('/send-email', req => {
+app.post('/send-email', (req, res) => {
     const options = {
         from: SERVICE_EMAIL,
         to: SERVICE_EMAIL,
@@ -52,6 +52,7 @@ app.post('/send-email', req => {
     };
 
     sendEmail(options)
+    res.send()
 })
 
 app.listen(PORT, () => {

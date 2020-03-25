@@ -1,6 +1,14 @@
 $(document).ready(function () {
     svg4everybody({});
 
+    $('#ya').on('click', () => {
+        if (!$('#ya').is(':checked')) {
+            $('button.btn.btn--contacts').prop('disabled', true);
+        } else {
+            $('button.btn.btn--contacts').prop('disabled', false);
+        }
+    })
+
     $('.form-end-page').submit((e) => {
         e.preventDefault()
 
@@ -18,7 +26,26 @@ $(document).ready(function () {
         $.ajax({
             type: 'POST',
             url: 'http://localhost:3002/send-email',
-            data
+            data,
+            success: function () {
+                let msg = $('#msg')
+                msg.addClass('success')
+                msg.show()
+                msg.text(() => {
+                    return 'Успешно отправлено !'
+                })
+                console.log('Успешно отправлено !');
+            },
+            error: function () {
+                let msg = $('#msg')
+                msg.removeClass('success')
+                msg.addClass('error')
+                msg.show()
+                msg.text(() => {
+                    return 'Ошибка'
+                })
+                console.log('Ошибка !')
+            }
         })
     })
 

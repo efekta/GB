@@ -221,6 +221,10 @@ input[type="checkbox"]:checked + label {
 	//min-width: 395px;
 	padding: 15px;
 	font-size: 17px;
+
+	&:disabled {
+		opacity: 0.6;
+	}
 }
 .contacts-form__item--custom {
 	padding: 20px 0;
@@ -235,4 +239,16 @@ input[type="checkbox"]:checked + label {
 		color: #5a46ff;
 		text-decoration: underline;
 	}
+}
+
+#msg {
+	display: none;
+}
+
+.error {
+	color: red;
+}
+
+.success {
+	color: green;
 }
