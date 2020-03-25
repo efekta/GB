@@ -1607,7 +1607,7 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
     max-width: 1290px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   .container {
     max-width: 100%;
   }
@@ -1631,7 +1631,7 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .title {
     font-size: 32px;
   }
@@ -1649,7 +1649,7 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .content-one__title {
     font-size: 40px;
   }
@@ -1692,7 +1692,7 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .section-two {
     padding: 0 60px;
   }
@@ -1736,7 +1736,7 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .section-three {
     background: #000000;
   }
@@ -1775,7 +1775,7 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .slick-next {
     right: 84%;
   }
@@ -1816,7 +1816,7 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .content-five {
     padding: 0 60px;
   }
@@ -1832,7 +1832,7 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .contacts-policy .contacts-form__item {
     padding: 15px 0 0 0;
   }
@@ -1884,7 +1884,7 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .content-six {
     padding: 0 60px;
   }
@@ -1916,7 +1916,7 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .content-seven {
     padding: 0 60px;
   }
@@ -1937,7 +1937,7 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .content-eight {
     padding: 0 60px;
   }
@@ -1978,7 +1978,7 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .content-eight-wrapp {
     flex-wrap: wrap;
   }
