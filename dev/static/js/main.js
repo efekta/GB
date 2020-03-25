@@ -10,7 +10,7 @@ $(document).ready(function () {
                 data[item.id] = `${$(item).attr('placeholder')}: ${$(item).val()}`
             } else {
                 if (item.checked) {
-                    data.reason = item.attributes['aria-valuetext'].value
+                    data.reason = $(item).attr('aria-valuetext')
                 }
             }
         }
