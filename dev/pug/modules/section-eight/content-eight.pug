@@ -18,12 +18,21 @@
                             .contacts-form__item
                                 input(type="radio", name="reason" id="integration" aria-valuetext="Рекламная интеграция на YouTube")
                                 label(for="integration") Рекламная интеграция на YouTube
+                                    span.ico-input
+                                        img.ico-input-check(src="static/images/general/checkbox.png")
+                                        img.ico-input-checked(src="static/images/general/checkbox_checked.png")
                             .contacts-form__item
                                 input(type="radio", name="reason" id="movie" aria-valuetext="Рекламный ролик")
                                 label(for="movie") Рекламный ролик
+                                    span.ico-input
+                                        img.ico-input-check(src="static/images/general/checkbox.png")
+                                        img.ico-input-checked(src="static/images/general/checkbox_checked.png")
                             .contacts-form__item
                                 input(type="radio", checked, name="reason" id="other" aria-valuetext="Другой вопрос")
                                 label(for="other") Другой вопрос
+                                    span.ico-input
+                                        img.ico-input-check(src="static/images/general/checkbox.png")
+                                        img.ico-input-checked(src="static/images/general/checkbox_checked.png")
                         .contacts-form-wrapp
                             .contacts-form__item
                                 input(type="text", placeholder="Имя", id="name" autocomplete="new-password")
@@ -44,3 +53,6 @@
                         .contacts-form__item.contacts-form__item--policy
                             input(type="checkbox", id="ya")
                             label.purpur(for="ya") Я принимаю <a class="policy" href="">условия передачи информации</a> и <a class="policy" href="">политику конфиденциальности</a>
+                                span.ico-input
+                                    img.ico-input-check(src="static/images/general/checkbox.png")
+                                    img.ico-input-checked(src="static/images/general/checkbox_checked.png")

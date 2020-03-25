@@ -12,6 +12,8 @@
 
 .content-eight-wrapp {
 	display: flex;
+	align-items: center;
+	height: 100%;
 }
 
 .content-contacts {
@@ -65,12 +67,13 @@
 .contacts-form-wrapp-flex {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	.contacts-form__item {
 		width: 50%;
 	}
 }
 .contacts-form__item {
-	display: flex;
+	//display: flex;
 	padding: 25px;
 	cursor: pointer;
 	input, textarea {
@@ -132,6 +135,16 @@ input[type="radio"]:checked + label::before {
 	background: url("/static/images/general/checkbox_checked.png") no-repeat;
 }
 
+input[type="radio"] {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	line-height: 25px;
+	margin-right: 10px;
+	cursor: pointer;
+	display: none;
+}
 input[type="checkbox"] {
 	position: relative;
 	width: 20px;
@@ -142,28 +155,64 @@ input[type="checkbox"] {
 	cursor: pointer;
 	display: none;
 }
-input[type="checkbox"] + label::before {
-	content: "";
+.ico-input {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 40px;
-	height: 40px;
-	//border: 2px solid #301aee;
-	//color: #301aee;
-	//font-size: 30px;
-	background: url("/static/images/general/checkbox.png") no-repeat;
+	width: 20px;
+	height: 20px;
 }
-input[type="checkbox"]:checked + label::before {
-	//content: "";
-	//position: absolute;
-	//top: 0;
-	//left: 0;
-	//width: 40px;
-	//height: 40px;
-	background: url("/static/images/general/checkbox_checked.png") no-repeat;
+.ico-input .ico-input-checked {
+	display: none;
+}
+input[type="radio"]:checked + label {
+	.ico-input .ico-input-check {
+		display: none;
+	}
+	.ico-input .ico-input-checked {
+		display: block;
+	}
+}
+input[type="checkbox"]:checked + label {
+	.ico-input .ico-input-check {
+		display: none;
+	}
+	.ico-input .ico-input-checked {
+		display: block;
+	}
 }
 
+//input[type="checkbox"] {
+//	position: relative;
+//	width: 20px;
+//	height: 20px;
+//	font-size: 20px;
+//	line-height: 25px;
+//	margin-right: 10px;
+//	cursor: pointer;
+//	display: none;
+//}
+//input[type="checkbox"] + label::before {
+//	content: "";
+//	position: absolute;
+//	top: 0;
+//	left: 0;
+//	width: 40px;
+//	height: 40px;
+//	//border: 2px solid #301aee;
+//	//color: #301aee;
+//	//font-size: 30px;
+//	background: url("/static/images/general/checkbox.png") no-repeat;
+//}
+//input[type="checkbox"]:checked + label::before {
+//	//content: "";
+//	//position: absolute;
+//	//top: 0;
+//	//left: 0;
+//	//width: 40px;
+//	//height: 40px;
+//	background: url("/static/images/general/checkbox_checked.png") no-repeat;
+//}
 .btn--contacts {
 	width: 100%;
 	background: #ff0000;

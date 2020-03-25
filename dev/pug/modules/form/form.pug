@@ -5,35 +5,47 @@
         span.form-close-text Закрыть
     .box-form__content
         h2.title-form Заполните форму
-        form(action="", method="POST", autocomplete="new-password")
-                .contacts-form-box
-                    .contacts-form-wrapp
-                        .contacts-form__item
-                            input(type="checkbox", checked, id="check1")
-                            label(for="check1") Рекламная интеграция на YouTube
-                        .contacts-form__item
-                            input(type="checkbox", id="check11")
-                            label(for="check11") Рекламный ролик
-                        .contacts-form__item
-                            input(type="checkbox", id="check22")
-                            label(for="check22") Другой вопрос
-                    .contacts-form-wrapp
-                        .contacts-form__item
-                            input(type="text", placeholder="Имя", autocomplete="new-password")
-                            //label(for="") Имя
-                    .contacts-form-wrapp.contacts-form-wrapp-flex
-                        .contacts-form__item
-                            input(type="tel", placeholder="Телефон", autocomplete="new-password")
-                            //label(for="") Телефон
-                        .contacts-form__item
-                            input(type="email", placeholder="E-mail", autocomplete="new-password")
-                            //label(for="") E-mail
-                    .contacts-form-wrapp.contacts-form-wrapp-border_none
-                        .contacts-form__item
-                            textarea(placeholder="Комментарий")
-                .contacts-form-wrapp.contacts-form-wrapp-flex.contacts-form-wrapp-border_none.contacts-policy
-                    .contacts-form__item.contacts-form__item--custom
-                        button.btn.btn--contacts(type="submit") отправить
-                    .contacts-form__item.contacts-form__item--policy
-                        input(type="checkbox", id="ya")
-                        label.purpur(for="ya") Я принимаю <a class="policy" href=""> условия передачи информации </a> и <a class="policy" href=""> политику конфиденциальности</a>
+        form(autocomplete="new-password")
+            .contacts-form-box
+                .contacts-form-wrapp
+                    .contacts-form__item
+                        input(type="radio", id="check10", name="rec1")
+                        label(for="check10") Рекламная интеграция на Youtube
+                            span.ico-input
+                                img.ico-input-check(src="static/images/general/checkbox.png")
+                                img.ico-input-checked(src="static/images/general/checkbox_checked.png")
+                    .contacts-form__item
+                        input(type="radio", id="check11", name="rec1")
+                        label(for="check11") Рекламный ролик
+                            span.ico-input
+                                img.ico-input-check(src="static/images/general/checkbox.png")
+                                img.ico-input-checked(src="static/images/general/checkbox_checked.png")
+                    .contacts-form__item
+                        input(type="radio", id="check21", name="rec1")
+                        label(for="check21") Другой вопрос
+                            span.ico-input
+                                img.ico-input-check(src="static/images/general/checkbox.png")
+                                img.ico-input-checked(src="static/images/general/checkbox_checked.png")
+                .contacts-form-wrapp
+                    .contacts-form__item
+                        input(type="text", placeholder="Имя", autocomplete="new-password")
+                        //label(for="") Имя
+                .contacts-form-wrapp.contacts-form-wrapp-flex
+                    .contacts-form__item
+                        input(type="tel", placeholder="Телефон", autocomplete="new-password")
+                        //label(for="") Телефон
+                    .contacts-form__item
+                        input(type="email", placeholder="E-mail", autocomplete="new-password")
+                        //label(for="") E-mail
+                .contacts-form-wrapp.contacts-form-wrapp-border_none
+                    .contacts-form__item
+                        textarea(placeholder="Комментарий")
+            .contacts-form-wrapp.contacts-form-wrapp-flex.contacts-form-wrapp-border_none.contacts-policy
+                .contacts-form__item.contacts-form__item--custom
+                    button.btn.btn--contacts(type="submit") отправить
+                .contacts-form__item.contacts-form__item--policy
+                    input(type="checkbox", id="ya1")
+                    label.purpur(for="ya1") Я принимаю <a class="policy" href="">условия передачи информации</a> и <a class="policy" href="">политику конфиденциальности</a>
+                        span.ico-input
+                            img.ico-input-check(src="static/images/general/checkbox.png")
+                            img.ico-input-checked(src="static/images/general/checkbox_checked.png")
