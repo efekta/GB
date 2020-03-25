@@ -29,6 +29,9 @@
 		margin-left: 18px;
 		display: inline-block;
 		vertical-align: middle;
+		&:first-child {
+			margin-left: 0;
+		}
 	}
 	a.whatsapp {
 		img {
@@ -67,6 +70,7 @@
 	}
 }
 .contacts-form__item {
+	display: flex;
 	padding: 25px;
 	cursor: pointer;
 	input, textarea {
