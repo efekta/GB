@@ -20,7 +20,7 @@ $(document).ready(function () {
         var item = _step.value;
 
         if (item.type !== 'radio' && item.type !== 'submit' && item.type !== 'checkbox') {
-          data[item.id] = $(item).val();
+          data[item.id] = "".concat($(item).attr('placeholder'), ": ").concat($(item).val());
         } else {
           if (item.checked) {
             data.reason = item.attributes['aria-valuetext'].value;
@@ -33,11 +33,11 @@ $(document).ready(function () {
       _iterator.f();
     }
 
-    console.log(data); // $.ajax({
-    //     type: 'POST',
-    //     url: 'index.php',
-    //     data
-    // })
+    $.ajax({
+      type: 'POST',
+      url: 'http://localhost:3002/send-email',
+      data: data
+    });
   });
   var $status = $('.pagingInfo');
   var $slickElement = $('.courusel-project');
