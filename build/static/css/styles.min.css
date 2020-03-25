@@ -1582,16 +1582,6 @@ input[type="checkbox"]:checked + label::before {
     max-width: 1290px;
   }
 }
-@media (min-width: 1024px) {
-  .container {
-    max-width: 991px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
 @media (max-width: 768px) {
   .container {
     max-width: 100%;
