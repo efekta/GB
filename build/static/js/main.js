@@ -1,72 +1,93 @@
 "use strict";
 
+var makeData = function makeData(elements) {
+  var data = {};
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = elements[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var item = _step.value;
+
+      if (item.type !== 'radio' && item.type !== 'submit' && item.type !== 'checkbox') {
+        data[item.name] = "".concat($(item).attr('placeholder'), ": ").concat($(item).val());
+      }
+
+      if (item.type === 'radio' && $(item).is(':checked')) {
+        data[item.name] = $(item).attr('aria-valuetext');
+      }
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return != null) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  return data;
+};
+
+var sendMsg = function sendMsg(data, idElemMsg) {
+  $.ajax({
+    type: 'POST',
+    url: 'http://localhost:3002/send-email',
+    data: data,
+    success: function success() {
+      var msg = $(idElemMsg);
+      msg.addClass('success');
+      msg.show();
+      msg.text(function () {
+        return 'Успешно отправлено !';
+      });
+      console.log('Успешно отправлено !');
+    },
+    error: function error() {
+      var msg = $(idElemMsg);
+      msg.removeClass('success');
+      msg.addClass('error');
+      msg.show();
+      msg.text(function () {
+        return 'Ошибка';
+      });
+      console.log('Ошибка !');
+    }
+  });
+};
+
+var isDisableButton = function isDisableButton(elem, btn) {
+  if (!$(elem).is(':checked')) {
+    $(btn).prop('disabled', true);
+  } else {
+    $(btn).prop('disabled', false);
+  }
+};
+
 $(document).ready(function () {
   svg4everybody({});
   $('#ya').on('click', function () {
-    if (!$('#ya').is(':checked')) {
-      $('button.btn.btn--contacts').prop('disabled', true);
-    } else {
-      $('button.btn.btn--contacts').prop('disabled', false);
-    }
+    isDisableButton('#ya', '#btn-contacts');
+  });
+  $('#ya-float').on('click', function () {
+    isDisableButton('#ya-float', '#btn-contacts-float');
   });
   $('.form-end-page').submit(function (e) {
     e.preventDefault();
-    var data = {};
-    var _iteratorNormalCompletion = true;
-    var _didIteratorError = false;
-    var _iteratorError = undefined;
-
-    try {
-      for (var _iterator = e.target.elements[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var item = _step.value;
-
-        if (item.type !== 'radio' && item.type !== 'submit' && item.type !== 'checkbox') {
-          data[item.id] = "".concat($(item).attr('placeholder'), ": ").concat($(item).val());
-        } else {
-          if (item.checked) {
-            data.reason = $(item).attr('aria-valuetext');
-          }
-        }
-      }
-    } catch (err) {
-      _didIteratorError = true;
-      _iteratorError = err;
-    } finally {
-      try {
-        if (!_iteratorNormalCompletion && _iterator.return != null) {
-          _iterator.return();
-        }
-      } finally {
-        if (_didIteratorError) {
-          throw _iteratorError;
-        }
-      }
-    }
-
-    $.ajax({
-      type: 'POST',
-      url: 'http://localhost:3002/send-email',
-      data: data,
-      success: function success() {
-        var msg = $('#msg');
-        msg.addClass('success');
-        msg.show();
-        msg.text(function () {
-          return 'Успешно отправлено !';
-        });
-        console.log('Успешно отправлено !');
-      },
-      error: function error() {
-        var msg = $('#msg');
-        msg.removeClass('success');
-        msg.addClass('error');
-        msg.show();
-        msg.text(function () {
-          return 'Ошибка';
-        });
-        console.log('Ошибка !');
-      }
-    });
+    var data = makeData(e.target.elements);
+    sendMsg(data, '#msg');
+  });
+  $('.form-float').submit(function (e) {
+    e.preventDefault();
+    var data = makeData(e.target.elements);
+    sendMsg(data, '#msg-float');
   });
   var $status = $('.pagingInfo');
   var $slickElement = $('.courusel-project');

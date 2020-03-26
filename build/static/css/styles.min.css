@@ -802,7 +802,7 @@ input {
 }
 
 .slick-next {
-  right: 85%;
+  right: 89%;
 }
 
 .pagingInfo,
@@ -1733,16 +1733,16 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
 }
 
 @media (max-width: 1400px) {
-  .section-two {
+  .content-two {
     padding: 0 60px;
   }
 }
 
 @media (max-width: 768px) {
-  .section-two {
+  .content-two {
     padding: 30px;
   }
-  .section-two .title {
+  .content-two .title {
     margin: 20px;
   }
   .services {

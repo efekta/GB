@@ -216,29 +216,29 @@
                         </div>
                         <div class="contacts-form-wrapp">
                           <div class="contacts-form__item">
-                            <input type="text" placeholder="Имя" id="name" autocomplete="new-password">
+                            <input type="text" placeholder="Имя" name="name" id="name" autocomplete="new-password">
                             <!--label(for="") Имя-->
                           </div>
                         </div>
                         <div class="contacts-form-wrapp contacts-form-wrapp-flex">
                           <div class="contacts-form__item">
-                            <input type="tel" placeholder="Телефон" id="phone" autocomplete="new-password">
+                            <input type="tel" placeholder="Телефон" name="phone" id="phone" autocomplete="new-password">
                             <!--label(for="") Телефон-->
                           </div>
                           <div class="contacts-form__item">
-                            <input type="email" placeholder="E-mail" id="email" autocomplete="new-password">
+                            <input type="email" placeholder="E-mail" name="email" id="email" autocomplete="new-password">
                             <!--label(for="") E-mail-->
                           </div>
                         </div>
                         <div class="contacts-form-wrapp contacts-form-wrapp-border_none">
                           <div class="contacts-form__item">
-                            <textarea placeholder="Комментарий" id="text"></textarea>
+                            <textarea placeholder="Комментарий" name="text" id="text"></textarea>
                           </div>
                         </div>
                       </div>
                       <div class="contacts-form-wrapp contacts-form-wrapp-flex contacts-form-wrapp-border_none">
                         <div class="contacts-form__item contacts-form__item--custom">
-                          <button class="btn btn--contacts" type="submit" disabled>отправить</button><span class="msg" id="msg"></span>
+                          <button class="btn btn--contacts" type="submit" disabled id="btn-contacts">отправить</button><span class="msg" id="msg"></span>
                         </div>
                         <div class="contacts-form__item contacts-form__item--policy">
                           <input type="checkbox" id="ya">
@@ -258,51 +258,51 @@
           <div class="form-close-wrapp"><span class="form-close"><i class="fal fa-times"></i></span><span class="form-close-text">Закрыть</span></div>
           <div class="box-form__content">
             <h2 class="title-form">Заполните форму</h2>
-            <form autocomplete="new-password">
+            <form class="form-float" autocomplete="new-password">
               <div class="contacts-form-box">
                 <div class="contacts-form-wrapp">
                   <div class="contacts-form__item">
-                    <input type="radio" id="check10" name="rec1">
-                    <label for="check10">Рекламная интеграция на Youtube<span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
+                    <input type="radio" id="integration-float-form" name="reason" aria-valuetext="Рекламная интеграция на YouTube">
+                    <label for="integration-float-form">Рекламная интеграция на Youtube<span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
                   </div>
                   <div class="contacts-form__item">
-                    <input type="radio" id="check11" name="rec1">
-                    <label for="check11">Рекламный ролик<span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
+                    <input type="radio" name="reason" id="movie-float-form" aria-valuetext="Рекламный ролик">
+                    <label for="movie-float-form">Рекламный ролик<span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
                   </div>
                   <div class="contacts-form__item">
-                    <input type="radio" id="check21" name="rec1">
-                    <label for="check21">Другой вопрос<span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
+                    <input type="radio" checked name="reason" id="other-float-form" aria-valuetext="Другой вопрос">
+                    <label for="other-float-form">Другой вопрос<span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
                   </div>
                 </div>
                 <div class="contacts-form-wrapp">
                   <div class="contacts-form__item">
-                    <input type="text" placeholder="Имя" autocomplete="new-password">
+                    <input type="text" placeholder="Имя" name="name" autocomplete="new-password">
                     <!--label(for="") Имя-->
                   </div>
                 </div>
                 <div class="contacts-form-wrapp contacts-form-wrapp-flex">
                   <div class="contacts-form__item">
-                    <input type="tel" placeholder="Телефон" autocomplete="new-password">
+                    <input type="tel" placeholder="Телефон" name="phone" autocomplete="new-password">
                     <!--label(for="") Телефон-->
                   </div>
                   <div class="contacts-form__item">
-                    <input type="email" placeholder="E-mail" autocomplete="new-password">
+                    <input type="email" placeholder="E-mail" name="email" autocomplete="new-password">
                     <!--label(for="") E-mail-->
                   </div>
                 </div>
                 <div class="contacts-form-wrapp contacts-form-wrapp-border_none">
                   <div class="contacts-form__item">
-                    <textarea placeholder="Комментарий"></textarea>
+                    <textarea placeholder="Комментарий" name="text"></textarea>
                   </div>
                 </div>
               </div>
               <div class="contacts-form-wrapp contacts-form-wrapp-flex contacts-form-wrapp-border_none contacts-policy">
                 <div class="contacts-form__item contacts-form__item--custom">
-                  <button class="btn btn--contacts" type="submit">отправить</button>
+                  <button class="btn btn--contacts" type="submit" disabled id="btn-contacts-float">отправить</button><span class="msg" id="msg-float"></span>
                 </div>
                 <div class="contacts-form__item contacts-form__item--policy">
-                  <input type="checkbox" id="ya1">
-                  <label class="purpur" for="ya1">Я принимаю <a class="policy" href="">условия передачи информации</a> и <a class="policy" href="">политику конфиденциальности</a><span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
+                  <input type="checkbox" id="ya-float">
+                  <label class="purpur" for="ya-float">Я принимаю <a class="policy" href="">условия передачи информации</a> и <a class="policy" href="">политику конфиденциальности</a><span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
                 </div>
               </div>
             </form>
