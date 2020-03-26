@@ -50,7 +50,7 @@ app.post('/send-email', (req, res) => {
                 </div>
             `
     };
-
+    console.log(req.body)
     sendEmail(options)
     res.send()
 })

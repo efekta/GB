@@ -1,52 +1,72 @@
+const makeData = (elements) => {
+    let data = {}
+    for (let item of elements) {
+        if (item.type !== 'radio' && item.type !== 'submit' && item.type !== 'checkbox') {
+            data[item.name] = `${$(item).attr('placeholder')}: ${$(item).val()}`
+        }
+        if (item.type === 'radio' && $(item).is(':checked')) {
+            data[item.name] = $(item).attr('aria-valuetext')
+        }
+    }
+    return data
+}
+
+const sendMsg = (data, idElemMsg) => {
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost:3002/send-email',
+        data,
+        success: function () {
+            let msg = $(idElemMsg)
+            msg.addClass('success')
+            msg.show()
+            msg.text(() => {
+                return 'Успешно отправлено !'
+            })
+            console.log('Успешно отправлено !');
+        },
+        error: function () {
+            let msg = $(idElemMsg)
+            msg.removeClass('success')
+            msg.addClass('error')
+            msg.show()
+            msg.text(() => {
+                return 'Ошибка'
+            })
+            console.log('Ошибка !')
+        }
+    })
+}
+
+const isDisableButton = (elem, btn) => {
+    if (!$(elem).is(':checked')) {
+        $(btn).prop('disabled', true);
+    } else {
+        $(btn).prop('disabled', false);
+    }
+}
+
 $(document).ready(function () {
     svg4everybody({});
 
     $('#ya').on('click', () => {
-        if (!$('#ya').is(':checked')) {
-            $('button.btn.btn--contacts').prop('disabled', true);
-        } else {
-            $('button.btn.btn--contacts').prop('disabled', false);
-        }
+        isDisableButton('#ya', '#btn-contacts')
+    })
+
+    $('#ya-float').on('click', () => {
+        isDisableButton('#ya-float', '#btn-contacts-float')
     })
 
     $('.form-end-page').submit((e) => {
         e.preventDefault()
+        const data = makeData(e.target.elements)
+        sendMsg(data, '#msg')
+    })
 
-        let data = {}
-        for (let item of e.target.elements) {
-            if (item.type !== 'radio' && item.type !== 'submit' && item.type !== 'checkbox') {
-                data[item.id] = `${$(item).attr('placeholder')}: ${$(item).val()}`
-            } else {
-                if (item.checked) {
-                    data.reason = $(item).attr('aria-valuetext')
-                }
-            }
-        }
-
-        $.ajax({
-            type: 'POST',
-            url: 'http://localhost:3002/send-email',
-            data,
-            success: function () {
-                let msg = $('#msg')
-                msg.addClass('success')
-                msg.show()
-                msg.text(() => {
-                    return 'Успешно отправлено !'
-                })
-                console.log('Успешно отправлено !');
-            },
-            error: function () {
-                let msg = $('#msg')
-                msg.removeClass('success')
-                msg.addClass('error')
-                msg.show()
-                msg.text(() => {
-                    return 'Ошибка'
-                })
-                console.log('Ошибка !')
-            }
-        })
+    $('.form-float').submit((e) => {
+        e.preventDefault()
+        const data = makeData(e.target.elements)
+        sendMsg(data, '#msg-float')
     })
 
     let $status = $('.pagingInfo');

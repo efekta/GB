@@ -16,40 +16,40 @@
                     .contacts-form-box
                         .contacts-form-wrapp
                             .contacts-form__item
-                                input(type="radio", name="reason" id="integration" aria-valuetext="Рекламная интеграция на YouTube")
+                                input(type="radio", name="reason", id="integration", aria-valuetext="Рекламная интеграция на YouTube")
                                 label(for="integration") Рекламная интеграция на YouTube
                                     span.ico-input
                                         img.ico-input-check(src="static/images/general/checkbox.png")
                                         img.ico-input-checked(src="static/images/general/checkbox_checked.png")
                             .contacts-form__item
-                                input(type="radio", name="reason" id="movie" aria-valuetext="Рекламный ролик")
+                                input(type="radio", name="reason", id="movie", aria-valuetext="Рекламный ролик")
                                 label(for="movie") Рекламный ролик
                                     span.ico-input
                                         img.ico-input-check(src="static/images/general/checkbox.png")
                                         img.ico-input-checked(src="static/images/general/checkbox_checked.png")
                             .contacts-form__item
-                                input(type="radio", checked, name="reason" id="other" aria-valuetext="Другой вопрос")
+                                input(type="radio", checked, name="reason", id="other", aria-valuetext="Другой вопрос")
                                 label(for="other") Другой вопрос
                                     span.ico-input
                                         img.ico-input-check(src="static/images/general/checkbox.png")
                                         img.ico-input-checked(src="static/images/general/checkbox_checked.png")
                         .contacts-form-wrapp
                             .contacts-form__item
-                                input(type="text", placeholder="Имя", id="name" autocomplete="new-password")
+                                input(type="text", placeholder="Имя", name="name" id="name" autocomplete="new-password")
                                 //label(for="") Имя
                         .contacts-form-wrapp.contacts-form-wrapp-flex
                             .contacts-form__item
-                                input(type="tel", placeholder="Телефон", id="phone", autocomplete="new-password")
+                                input(type="tel", placeholder="Телефон", name="phone" id="phone", autocomplete="new-password")
                                 //label(for="") Телефон
                             .contacts-form__item
-                                input(type="email", placeholder="E-mail", id="email", autocomplete="new-password")
+                                input(type="email", placeholder="E-mail", name="email" id="email", autocomplete="new-password")
                                 //label(for="") E-mail
                         .contacts-form-wrapp.contacts-form-wrapp-border_none
                             .contacts-form__item
-                                textarea(placeholder="Комментарий", id="text")
+                                textarea(placeholder="Комментарий", name="text" id="text")
                     .contacts-form-wrapp.contacts-form-wrapp-flex.contacts-form-wrapp-border_none
                         .contacts-form__item.contacts-form__item--custom
-                            button.btn.btn--contacts(type="submit" disabled) отправить
+                            button.btn.btn--contacts(type="submit" disabled id="btn-contacts") отправить
                             span.msg(id="msg")
                         .contacts-form__item.contacts-form__item--policy
                             input(type="checkbox", id="ya")
