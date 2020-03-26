@@ -1010,7 +1010,7 @@ input {
 .contact__content {
   transform: rotate(-90deg);
   transform-origin: right bottom;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 .contact__content p {
   color: #ffffff;
@@ -1753,6 +1753,32 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
   color: #ffffff;
 }
 
+@-webkit-keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 1.15, 1.15);
+  }
+  to {
+    transform: scale3d(1.3, 1.3, 1.3);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+}
+
+.pulse {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -1944,6 +1970,9 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
   }
   .content-four {
     padding: 0 60px;
+  }
+  .content-four .desc {
+    font-size: 35px;
   }
 }
 

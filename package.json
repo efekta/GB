@@ -47,7 +47,8 @@
     "onepage-scroll": "^1.3.0",
     "owl.carousel": "^2.3.4",
     "slick-carousel": "^1.8.1",
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2.1.9",
+    "wowjs": "^1.1.3"
   },
   "browserslist": [
     "last 3 version",

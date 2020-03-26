@@ -49,6 +49,10 @@ const isDisableButton = (elem, btn) => {
 $(document).ready(function () {
     svg4everybody({});
 
+    // wow
+    new WOW().init();
+
+    //forms
     $('#ya').on('click', () => {
         isDisableButton('#ya', '#btn-contacts')
     })
@@ -84,6 +88,7 @@ $(document).ready(function () {
         let i = (currentSlide ? currentSlide : 0) + 1;
         $statusCourusel.text(i + ' из ' + slick.slideCount);
     });
+
     // slider
     $('.courusel').slick({
         dots: false,
@@ -154,6 +159,7 @@ $(document).ready(function () {
             }
         ]
     });
+
     // Scrollify
     $(function() {
         $.scrollify({
@@ -194,7 +200,7 @@ $(document).ready(function () {
         afterResize:function() {},
         afterRender:function() {}
     });
-
+    // pagination
     $('.pagination-nav__item.prev').on('click', (event) => {
         event.preventDefault()
         $.scrollify.previous();
@@ -229,6 +235,7 @@ $(document).ready(function () {
 
     // mask input
     $(".phone-input").mask("+ 7 (999) 999-9999");
+
 });
 // end ready
 

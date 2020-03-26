@@ -72,7 +72,10 @@ var isDisableButton = function isDisableButton(elem, btn) {
 };
 
 $(document).ready(function () {
-  svg4everybody({});
+  svg4everybody({}); // wow
+
+  new WOW().init(); //forms
+
   $('#ya').on('click', function () {
     isDisableButton('#ya', '#btn-contacts');
   });
@@ -201,7 +204,8 @@ $(document).ready(function () {
     },
     afterResize: function afterResize() {},
     afterRender: function afterRender() {}
-  });
+  }); // pagination
+
   $('.pagination-nav__item.prev').on('click', function (event) {
     event.preventDefault();
     $.scrollify.previous();
