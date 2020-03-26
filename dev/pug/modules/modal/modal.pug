@@ -4,7 +4,7 @@
         .modal-header
             button.modal-close.modal-toggle
                 i.icon-close.icon.fal.fa-times
-            h2.modal-heading Обратная связь
+            h2.modal-heading Запросить кейсы
         .modal-body
             .modal-content
                 form.form-modal(autocomplete="new-password")
@@ -23,7 +23,7 @@
                                  textarea(placeholder="Комментарий", name="text")
                         .contacts-form-wrapp.contacts-form-wrapp-border_none.contacts-policy
                             .contacts-form__item.contacts-form__item--custom.contacts-form__item--custom-modal
-                                button.btn.btn--contacts(type="submit" id="btn-contacts-modal") отправить
+                                button.btn.btn--contacts(type="submit" id="btn-contacts-modal" disabled) отправить
                                 span.msg(id="msg-modal")
                             .contacts-form__item.contacts-form__item-modal
                                 input(type="checkbox", id="ya-modal")

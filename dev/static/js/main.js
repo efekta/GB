@@ -49,6 +49,7 @@ const isDisableButton = (elem, btn) => {
 $(document).ready(function () {
     svg4everybody({});
 
+    // disable btn via checkbox
     $('#ya').on('click', () => {
         isDisableButton('#ya', '#btn-contacts')
     })
@@ -57,6 +58,11 @@ $(document).ready(function () {
         isDisableButton('#ya-float', '#btn-contacts-float')
     })
 
+    $('#ya-modal').on('click', () => {
+        isDisableButton('#ya-modal', '#btn-contacts-modal')
+    })
+
+    // send message
     $('.form-end-page').submit((e) => {
         e.preventDefault()
         const data = makeData(e.target.elements)
@@ -67,6 +73,13 @@ $(document).ready(function () {
         e.preventDefault()
         const data = makeData(e.target.elements)
         sendMsg(data, '#msg-float')
+    })
+
+    $('.form-modal').submit((e) => {
+        e.preventDefault()
+        const data = makeData(e.target.elements)
+        data.reason = $('.modal-heading').text()
+        sendMsg(data, '#msg-modal')
     })
 
     let $status = $('.pagingInfo');
