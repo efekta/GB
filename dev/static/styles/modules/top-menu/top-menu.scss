@@ -20,6 +20,7 @@
 	color: #fff;
 	font-size: 17px;
 	text-transform: uppercase;
+	transition: all .5s;
 	&::after {
 		content: '';
 		position: absolute;
@@ -34,6 +35,7 @@
 .menu__link--phone {
 	font-size: 22px;
 	color: #fff;
+	transition: all .5s;
 }
 .menu__link.menu__link--btn:hover {
 	background: #fff;

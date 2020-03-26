@@ -27,9 +27,19 @@
           </div></a>
         <ul class="socials-list">
           <li class="socials-list__item"><a class="socials-list__link youtube" href=""><span><i class="fab fa-youtube"></i></span></a></li>
-          <li class="socials-list__item"><a class="socials-list__link instagram" href=""><span><i class="fab fa-instagram"></i></span></a></li>
-          <li class="socials-list__item"><a class="socials-list__link facebook" href=""><span><i class="fab fa-facebook-f"></i></span></a></li>
-          <li class="socials-list__item"><a class="socials-list__link vk" href=""><span><i class="fab fa-vk"></i></span></a></li>
+          <!--li.socials-list__item-->
+          <!--	a.socials-list__link.instagram(href="")-->
+          <!--		span-->
+          <!--			i.fab.fa-instagram-->
+          <!--li.socials-list__item-->
+          <!--	a.socials-list__link.facebook(href="")-->
+          <!--		span-->
+          <!--			i.fab.fa-facebook-f-->
+          <!--li.socials-list__item-->
+          <!--	a.socials-list__link.vk(href="")-->
+          <!--		span-->
+          <!--			i.fab.fa-vk-->
+          <li class="socials-list__item"><a class="socials-list__link whatsapp" href=""><span><i class="fab fa-whatsapp"></i></span></a></li>
           <li class="socials-list__item"><a class="socials-list__link telegram" href=""><span><i class="fab fa-telegram-plane"></i></span></a></li>
         </ul>
         <section class="section section-one">
@@ -74,7 +84,8 @@
                     <h3 class="services-title">Создание рекламных роликов под ключ</h3>
                     <div class="services-content">
                       <p>Разработка идеи и создание сценария под ключ. Профессиональная сьемка и монтаж.</p>
-                    </div><a class="services-link" href="">Запросить кейсы</a>
+                    </div>
+                    <button class="services-link modal-toggle">Запросить кейсы</button>
                   </div>
                 </div>
               </div>
@@ -303,6 +314,52 @@
                 <div class="contacts-form__item contacts-form__item--policy">
                   <input type="checkbox" id="ya-float">
                   <label class="purpur" for="ya-float">Я принимаю <a class="policy" href="">условия передачи информации</a> и <a class="policy" href="">политику конфиденциальности</a><span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-overlay modal-toggle"></div>
+      <div class="modal-wrapper modal-transition">
+        <div class="modal-header">
+          <button class="modal-close modal-toggle"><i class="icon-close icon fal fa-times"></i></button>
+          <h2 class="modal-heading">Обратная связь</h2>
+        </div>
+        <div class="modal-body">
+          <div class="modal-content">
+            <form class="form-modal" autocomplete="new-password">
+              <div class="contacts-form-box">
+                <div class="contacts-form-wrapp">
+                  <div class="contacts-form__item">
+                    <input type="text" placeholder="Имя" name="name" autocomplete="new-password">
+                  </div>
+                </div>
+                <div class="contacts-form-wrapp">
+                  <div class="contacts-form__item">
+                    <input class="phone-input" type="tel" placeholder="Телефон" name="phone" autocomplete="new-password">
+                  </div>
+                </div>
+                <div class="contacts-form-wrapp">
+                  <div class="contacts-form__item">
+                    <input type="email" placeholder="E-mail" name="email" autocomplete="new-password">
+                  </div>
+                </div>
+                <div class="contacts-form-wrapp">
+                  <div class="contacts-form__item">
+                    <textarea placeholder="Комментарий" name="text"></textarea>
+                  </div>
+                </div>
+                <div class="contacts-form-wrapp contacts-form-wrapp-border_none contacts-policy">
+                  <div class="contacts-form__item contacts-form__item--custom contacts-form__item--custom-modal">
+                    <button class="btn btn--contacts" type="submit" id="btn-contacts-modal">отправить</button><span class="msg" id="msg-modal"></span>
+                  </div>
+                  <div class="contacts-form__item contacts-form__item-modal">
+                    <input type="checkbox" id="ya-modal">
+                    <label class="purpur" for="ya-modal">Я принимаю <a class="policy" href="">условия передачи информации</a> и <a class="policy" href="">политику конфиденциальности</a><span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
+                  </div>
                 </div>
               </div>
             </form>

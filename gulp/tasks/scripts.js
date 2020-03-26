@@ -14,7 +14,8 @@ module.exports = function () {
             // 'node_modules/owl.carousel/dist/owl.carousel.min.js',
             'node_modules/slick-carousel/slick/slick.js',
             // 'dev/libs/slick/slick.js',
-            'dev/libs/fontawesome/svg-with-js/js/fontawesome-all.js'
+            'dev/libs/fontawesome/svg-with-js/js/fontawesome-all.js',
+            'dev/libs/mask/jquery.maskedinput.js'
             ])
             .pipe(concat('libs.min.js'))
             .pipe($.gulp.dest(scriptsPATH.output));
@@ -27,7 +28,8 @@ module.exports = function () {
             // 'node_modules/owl.carousel/dist/owl.carousel.min.js',
             'node_modules/slick-carousel/slick/slick.js',
             // 'dev/libs/slick/slick.js',
-            'dev/libs/fontawesome/svg-with-js/js/fontawesome-all.js'
+            'dev/libs/fontawesome/svg-with-js/js/fontawesome-all.js',
+            'dev/libs/mask/jquery.maskedinput.js'
             ])
             .pipe(concat('libs.min.js'))
             .pipe(uglify())

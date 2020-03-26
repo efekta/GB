@@ -6,23 +6,23 @@
 	z-index: 2;
 	cursor: pointer;
 	text-align: right;
-	transition: all .5s ease;
+	//transition: all .5s ease;
 }
 .contact__pic--show {
 	display: inline-block;
-	transition: all .5s ease;
+	//transition: all .5s ease;
 	opacity: 1;
 }
 .contact__pic--hover {
 	display: none;
-	transition: all .5s ease;
+	//transition: all .5s ease;
 	opacity: 0;
 }
 .contact__content {
 	transform: rotate(-90deg);
     transform-origin: right bottom;
     padding-bottom: 30px;
-    transition: all .5s ease;
+    //transition: all .5s ease;
 	p {
 		color: #fff;
 		font-size: 18px;
@@ -35,10 +35,12 @@
 		.contact__pic--show {
 			display: none;
 			opacity: 0;
+			//transition: all .5s;
 		}
 		.contact__pic--hover {
 			display: inline-block;
 			opacity: 1;
+			//transition: all .5s;
 		}
 	}
 }

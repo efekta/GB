@@ -203,7 +203,7 @@
 //four
 @media(max-width: 1400px) {
   .slick-next {
-    right: 84%;
+    right: 85%;
   }
   .content-four {
     padding: 0 60px;
@@ -259,9 +259,9 @@
 
 // form modal
 @media(max-width: 1400px) {
-  .contacts-policy .contacts-form__item {
+  .contacts-policy .contacts-form__item.contacts-form__item--policy {
     //width: 100%;
-    padding: 15px 0 0 0;
+    //padding: 20px 0 0 0;
   }
 }
 @media(max-width: 768px) {
@@ -417,6 +417,9 @@
   .contacts-form-wrapp-flex .contacts-form__item {
     width: 100%;
   }
+  .contacts-form__item.contacts-form__item--policy {
+    padding: 0;
+  }
 }
 
 @media(max-width: 1024px) {
@@ -468,5 +471,24 @@
       letter-spacing: 2px;
       font-size: 14px;
     }
+  }
+}
+
+
+// modal
+@media(max-width: 768px) {
+  .modal-wrapper {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .modal-heading {
+    font-size: 30px;
+  }
+}
+
+@media(max-width: 590px) {
+  .modal-heading {
+    font-size: 28px;
   }
 }

@@ -212,18 +212,27 @@ $(document).ready(function () {
     $('.video-close').on('click', function(){
         $('.box-video').removeClass('show')
     })
+    // modal
+    $('.modal-toggle').on('click', function(e) {
+        e.preventDefault();
+        $('.modal').toggleClass('is-visible');
+    });
 
+    // form modal
+    $('.contact').on('click', function(event){
+        event.preventDefault();
+        $('.site-wrapp').addClass('open')
+    })
+    $('.form-close-wrapp').on('click', function(){
+        $('.site-wrapp').removeClass('open')
+    })
+
+    // mask input
+    $(".phone-input").mask("+ 7 (999) 999-9999");
 });
 // end ready
 
-// form modal
-$('.contact').on('click', function(event){
-    event.preventDefault();
-    $('.site-wrapp').addClass('open')
-})
-$('.form-close-wrapp').on('click', function(){
-    $('.site-wrapp').removeClass('open')
-})
+
 // Полифилы
 
 // forEach IE 11

@@ -1,0 +1,35 @@
+.modal
+    .modal-overlay.modal-toggle
+    .modal-wrapper.modal-transition
+        .modal-header
+            button.modal-close.modal-toggle
+                i.icon-close.icon.fal.fa-times
+            h2.modal-heading Обратная связь
+        .modal-body
+            .modal-content
+                form.form-modal(autocomplete="new-password")
+                    .contacts-form-box
+                        .contacts-form-wrapp
+                            .contacts-form__item
+                                input(type="text", placeholder="Имя", name="name", autocomplete="new-password")
+                        .contacts-form-wrapp
+                            .contacts-form__item
+                                input.phone-input(type="tel", placeholder="Телефон", name="phone", autocomplete="new-password")
+                        .contacts-form-wrapp
+                            .contacts-form__item
+                                input(type="email", placeholder="E-mail", name="email", autocomplete="new-password")
+                        .contacts-form-wrapp
+                             .contacts-form__item
+                                 textarea(placeholder="Комментарий", name="text")
+                        .contacts-form-wrapp.contacts-form-wrapp-border_none.contacts-policy
+                            .contacts-form__item.contacts-form__item--custom.contacts-form__item--custom-modal
+                                button.btn.btn--contacts(type="submit" id="btn-contacts-modal") отправить
+                                span.msg(id="msg-modal")
+                            .contacts-form__item.contacts-form__item-modal
+                                input(type="checkbox", id="ya-modal")
+                                label.purpur(for="ya-modal") Я принимаю <a class="policy" href="">условия передачи информации</a> и <a class="policy" href="">политику конфиденциальности</a>
+                                    span.ico-input
+                                        img.ico-input-check(src="static/images/general/checkbox.png")
+                                        img.ico-input-checked(src="static/images/general/checkbox_checked.png")
+
+

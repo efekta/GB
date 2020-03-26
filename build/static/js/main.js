@@ -216,17 +216,24 @@ $(document).ready(function () {
   });
   $('.video-close').on('click', function () {
     $('.box-video').removeClass('show');
-  });
-}); // end ready
-// form modal
+  }); // modal
 
-$('.contact').on('click', function (event) {
-  event.preventDefault();
-  $('.site-wrapp').addClass('open');
-});
-$('.form-close-wrapp').on('click', function () {
-  $('.site-wrapp').removeClass('open');
-}); // Полифилы
+  $('.modal-toggle').on('click', function (e) {
+    e.preventDefault();
+    $('.modal').toggleClass('is-visible');
+  }); // form modal
+
+  $('.contact').on('click', function (event) {
+    event.preventDefault();
+    $('.site-wrapp').addClass('open');
+  });
+  $('.form-close-wrapp').on('click', function () {
+    $('.site-wrapp').removeClass('open');
+  }); // mask input
+
+  $(".phone-input").mask("+ 7 (999) 999-9999");
+}); // end ready
+// Полифилы
 // forEach IE 11
 
 if ('NodeList' in window && !NodeList.prototype.forEach) {

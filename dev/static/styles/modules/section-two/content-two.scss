@@ -43,7 +43,15 @@
 		font-size: 17px;
 		color: #301aee;
 		text-transform: uppercase;
-		margin-top: 50px;
+		margin-top: 40px;
+		cursor: pointer;
+		border: 1px solid #fff;
+		transition: all .5s;
+		&:hover {
+			color: #fff;
+			background: #301aee;
+			//border: 1px solid #fff;
+		}
 		&:after {
 			content: '';
 			position: absolute;
