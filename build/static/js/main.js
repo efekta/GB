@@ -72,13 +72,21 @@ var isDisableButton = function isDisableButton(elem, btn) {
 };
 
 $(document).ready(function () {
-  svg4everybody({});
+  svg4everybody({}); // wow
+
+  new WOW().init(); //forms
+  // disable btn via checkbox
+
   $('#ya').on('click', function () {
     isDisableButton('#ya', '#btn-contacts');
   });
   $('#ya-float').on('click', function () {
     isDisableButton('#ya-float', '#btn-contacts-float');
   });
+  $('#ya-modal').on('click', function () {
+    isDisableButton('#ya-modal', '#btn-contacts-modal');
+  }); // send message
+
   $('.form-end-page').submit(function (e) {
     e.preventDefault();
     var data = makeData(e.target.elements);
@@ -88,6 +96,12 @@ $(document).ready(function () {
     e.preventDefault();
     var data = makeData(e.target.elements);
     sendMsg(data, '#msg-float');
+  });
+  $('.form-modal').submit(function (e) {
+    e.preventDefault();
+    var data = makeData(e.target.elements);
+    data.reason = $('.modal-heading').text();
+    sendMsg(data, '#msg-modal');
   });
   var $status = $('.pagingInfo');
   var $slickElement = $('.courusel-project');
@@ -201,7 +215,8 @@ $(document).ready(function () {
     },
     afterResize: function afterResize() {},
     afterRender: function afterRender() {}
-  });
+  }); // pagination
+
   $('.pagination-nav__item.prev').on('click', function (event) {
     event.preventDefault();
     $.scrollify.previous();

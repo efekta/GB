@@ -73,8 +73,14 @@
 		outline: none
 	}
 }
-section {
+.section {
 	min-height: 700px;
+}
+.section.section-eight {
+	//min-height: 700px;
+	@media(max-height: 768px) {
+		min-height: 1100px;
+	}
 }
 a, button, textarea, input {
 	outline: none;
@@ -129,3 +135,9 @@ a, button, textarea, input {
 //.section-two {
 //	background-image: url("static/images/content/bg-two.jpg");
 //}
+input:-internal-autofill-selected {
+	background-color: transparent !important;
+}
+input {
+	background-color: transparent !important;
+}
