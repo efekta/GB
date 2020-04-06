@@ -1562,11 +1562,11 @@ input[type="radio"] + label::before {
   left: 0;
   width: 40px;
   height: 40px;
-  background: url("/static/images/general/checkbox.png") no-repeat;
+  background: url("static/images/general/checkbox.png") no-repeat;
 }
 
 input[type="radio"]:checked + label::before {
-  background: url("/static/images/general/checkbox_checked.png") no-repeat;
+  background: url("static/images/general/checkbox_checked.png") no-repeat;
 }
 
 input[type="radio"] {
