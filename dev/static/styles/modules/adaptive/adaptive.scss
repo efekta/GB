@@ -186,6 +186,7 @@
     //position: relative;
     //object-fit: contain;
   }
+
   .content-three-box p {
     font-size: 28px;
     margin-bottom: 20px;
@@ -194,7 +195,11 @@
     font-size: 28px;
   }
 }
-
+@media(max-width: 1024px) {
+  .box-video {
+    width: calc(100% - 100px);
+  }
+}
 @media(max-width: 768px) {
   .video-wrapp video {
     height: auto;
@@ -209,6 +214,7 @@
       max-width: 30px;
     }
   }
+
 }
 
 @media(max-width: 590px) {
