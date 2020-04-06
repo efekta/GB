@@ -46,6 +46,11 @@
   .title {
     font-size: 23px;
   }
+  .section-one {
+    .video-wrapp video {
+      height: 100%;
+    }
+  }
 }
 @media(max-width: 590px) {
   .title {
@@ -169,14 +174,14 @@
 // three
 @media(max-width: 1400px) {
   .section-three {
-    background: #000;
+    background: url("/static/images/content/video-bg-6.jpg") no-repeat;
   }
   .content-three .title {
     margin: 20px 0;
   }
   .video-wrapp video {
-    position: relative;
-    object-fit: contain;
+    //position: relative;
+    //object-fit: contain;
   }
   .content-three-box p {
     font-size: 28px;
@@ -188,6 +193,14 @@
 }
 
 @media(max-width: 768px) {
+  .video-wrapp video {
+    height: auto;
+  }
+  .content-three {
+    top: 110px;
+    transform: translateX(-50%);
+  }
+
   .content-three-box .btn {
     img {
       max-width: 30px;
@@ -246,7 +259,7 @@
 
     iframe {
       //width: 100%;
-      min-height: auto;
+      //min-height: auto;
     }
   }
 }

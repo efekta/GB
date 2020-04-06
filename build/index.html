@@ -21,7 +21,7 @@
           <div class="pagination-list"><a class="pagination-list__item active"><span class="pagination-list__link"></span></a></div>
         </div>
         <div class="logo"><img src="static/images/general/logo.png" alt="pic"></div>
-        <div class="top-menu menu"><a class="menu__link menu__link--btn" href=""><span>Услуги IT</span></a><a class="menu__link menu__link--phone" href="tel:+79181634574">+7 918 163 45 74</a></div><a class="contact" href=""><img class="wow pulse contact__pic--show" src="static/images/general/circle.png" alt="pic"><img class="wow pulse contact__pic--hover" src="static/images/general/circle-white.png" alt="pic">
+        <div class="top-menu menu"><a class="menu__link menu__link--btn" href="#advant"><span>Услуги IT</span></a><a class="menu__link menu__link--phone" href="tel:+79181634574">+7 918 163 45 74</a></div><a class="contact" href=""><img class="wow pulse contact__pic--show" src="static/images/general/circle.png" alt="pic"><img class="wow pulse contact__pic--hover" src="static/images/general/circle-white.png" alt="pic">
           <div class="contact__content">
             <p>Связаться с нами</p>
           </div></a>
@@ -43,15 +43,19 @@
           <li class="socials-list__item"><a class="socials-list__link telegram" href="https://telega.ru/lsergol"><span><i class="fab fa-telegram-plane"></i></span></a></li>
         </ul>
         <section class="section section-one">
-          <div class="pic-wrapp" style="background-image: url('static/images/content/video-bg-1.jpg')"></div>
-          <div class="content-one-wrapp">
-            <div class="content-one">
-              <h2 class="content-one__subtitle">Голодный Бизнес Media</h2>
-              <h1 class="content-one__title">РЕКЛАМА ВАШЕГО БИЗНЕСА</h1>
-            </div>
+          <div class="video-wrapp">
+            <video pip="false" loop="" muted="muted" autoplay="" data-keepplaying="" data-autoplay="" playsinline="" webkit-playsinline="">
+              <source src="/static/images/video/Showreel.mp4" type="video/mp4">
+            </video>
           </div>
+          <!--include content-one.pug
+          //- img(src="/static/images/content/video-bg-1.jpg", alt="pic")
+          //- video(pip="false" loop="" muted="muted" autoplay="" data-keepplaying="" data-autoplay="" playsinline="" webkit-playsinline="")
+          //- 	source(src="/static/images/video/Showreel.mp4" type="video/mp4")
+          		
+          -->
         </section>
-        <section class="section section-two">
+        <section class="section section-two" id="advant">
           <div class="pic-wrapp" style="background-image: url('static/images/content/bg-two.jpg')">
             <div class="content-two">
               <div class="container">
@@ -133,31 +137,19 @@
                       <!--img.project-slide(src='static/images/content/slide_i_2.jpg')-->
                       <!--img.project-icon(src='static/images/general/youtube_slider_icon.png')-->
                     </div>
-                    <p>SMM специалист как заработать миллион. SMM как</p></a><a class="courusel-project__item" href="">
+                    <p>SMM специалист как заработать миллион.</p></a><a class="courusel-project__item" href="">
                     <div class="project-pic">
-                      <iframe src="https://www.youtube.com/embed/LAQ-6_V4ogU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe src="https://www.youtube.com/embed/1UIG-SS7Rt8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                       <!--img.project-slide(src='static/images/content/slide_i_3.jpg')-->
                       <!--img.project-icon(src='static/images/general/youtube_slider_icon.png')-->
                     </div>
-                    <p>Профессия интернет-маркетолог. Как работает S</p></a><a class="courusel-project__item" href="">
+                    <p>Красная поляна. Казино в сочи.</p></a><a class="courusel-project__item" href="">
                     <div class="project-pic">
-                      <iframe src="https://www.youtube.com/embed/LAQ-6_V4ogU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe src="https://www.youtube.com/embed/vfEuaafg8N4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                       <!--img.project-slide(src='static/images/content/slide_i_1.jpg')-->
                       <!--img.project-icon(src='static/images/general/youtube_slider_icon.png')-->
                     </div>
-                    <p>Игрушки для взрослых, секс шоп Incognito.</p></a><a class="courusel-project__item" href="">
-                    <div class="project-pic">
-                      <iframe src="https://www.youtube.com/embed/LAQ-6_V4ogU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                      <!--img.project-slide(src='static/images/content/slide_i_2.jpg')-->
-                      <!--img.project-icon(src='static/images/general/youtube_slider_icon.png')-->
-                    </div>
-                    <p>SMM специалист как заработать миллион. SMM как</p></a><a class="courusel-project__item" href="">
-                    <div class="project-pic">
-                      <iframe src="https://www.youtube.com/embed/LAQ-6_V4ogU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                      <!--img.project-slide(src='static/images/content/slide_i_3.jpg')-->
-                      <!--img.project-icon(src='static/images/general/youtube_slider_icon.png')-->
-                    </div>
-                    <p>Профессия интернет-маркетолог. Как работает S</p></a></div>
+                    <p>Горнолыжный курорт Красная Поляна, Сочи.</p></a></div>
               </div>
             </div>
           </div>
@@ -258,7 +250,7 @@
                         </div>
                         <div class="contacts-form-wrapp contacts-form-wrapp-flex">
                           <div class="contacts-form__item">
-                            <input type="tel" placeholder="Телефон" name="phone" id="phone" autocomplete="new-password">
+                            <input class="phone-input" type="tel" placeholder="Телефон" name="phone" id="phone" autocomplete="new-password">
                             <!--label(for="") Телефон-->
                           </div>
                           <div class="contacts-form__item">
@@ -278,7 +270,7 @@
                         </div>
                         <div class="contacts-form__item contacts-form__item--policy">
                           <input type="checkbox" id="ya">
-                          <label class="purpur" for="ya">Я принимаю <a class="policy" href="">условия передачи информации</a> и <a class="policy" href="">политику конфиденциальности</a><span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
+                          <label class="purpur" for="ya">Я принимаю <a class="policy" target="_blank" href="https://tilda.cc/ru/privacy-generator/">условия передачи информации</a> и <a class="policy" target="_blank" href="https://tilda.cc/ru/privacy-generator/">политику конфиденциальности</a><span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
                         </div>
                       </div>
                     </form>
@@ -318,7 +310,7 @@
                 </div>
                 <div class="contacts-form-wrapp contacts-form-wrapp-flex">
                   <div class="contacts-form__item">
-                    <input type="tel" placeholder="Телефон" name="phone" autocomplete="new-password">
+                    <input class="phone-input" type="tel" placeholder="Телефон" name="phone" autocomplete="new-password">
                     <!--label(for="") Телефон-->
                   </div>
                   <div class="contacts-form__item">
@@ -338,7 +330,7 @@
                 </div>
                 <div class="contacts-form__item contacts-form__item--policy">
                   <input type="checkbox" id="ya-float">
-                  <label class="purpur" for="ya-float">Я принимаю <a class="policy" href="">условия передачи информации</a> и <a class="policy" href="">политику конфиденциальности</a><span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
+                  <label class="purpur" for="ya-float">Я принимаю <a class="policy" target="_blank" href="https://tilda.cc/ru/privacy-generator/">условия передачи информации</a> и <a class="policy" target="_blank" href="https://tilda.cc/ru/privacy-generator/">политику конфиденциальности</a><span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
                 </div>
               </div>
             </form>
@@ -383,7 +375,7 @@
                   </div>
                   <div class="contacts-form__item contacts-form__item-modal">
                     <input type="checkbox" id="ya-modal">
-                    <label class="purpur" for="ya-modal">Я принимаю <a class="policy" href="">условия передачи информации</a> и <a class="policy" href="">политику конфиденциальности</a><span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
+                    <label class="purpur" for="ya-modal">Я принимаю <a class="policy" target="_blank" href="https://tilda.cc/ru/privacy-generator/">условия передачи информации</a> и <a class="policy" target="_blank" href="https://tilda.cc/ru/privacy-generator/">политику конфиденциальности</a><span class="ico-input"><img class="ico-input-check" src="static/images/general/checkbox.png"><img class="ico-input-checked" src="static/images/general/checkbox_checked.png"></span></label>
                   </div>
                 </div>
               </div>

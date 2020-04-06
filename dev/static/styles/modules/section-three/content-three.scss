@@ -34,7 +34,7 @@
 	opacity: 0;
 	visibility: hidden;
 	position: absolute;
-    width: 50%;
+    width: calc(100% - 100px);
     height: 50%;
     border: 10px solid #fff;
     top: 50%;

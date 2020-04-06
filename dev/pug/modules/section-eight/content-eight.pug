@@ -39,7 +39,7 @@
                                 //label(for="") Имя
                         .contacts-form-wrapp.contacts-form-wrapp-flex
                             .contacts-form__item
-                                input(type="tel", placeholder="Телефон", name="phone" id="phone", autocomplete="new-password")
+                                input.phone-input(type="tel", placeholder="Телефон", name="phone" id="phone", autocomplete="new-password")
                                 //label(for="") Телефон
                             .contacts-form__item
                                 input(type="email", placeholder="E-mail", name="email" id="email", autocomplete="new-password")
@@ -53,7 +53,7 @@
                             span.msg(id="msg")
                         .contacts-form__item.contacts-form__item--policy
                             input(type="checkbox", id="ya")
-                            label.purpur(for="ya") Я принимаю <a class="policy" href="">условия передачи информации</a> и <a class="policy" href="">политику конфиденциальности</a>
+                            label.purpur(for="ya") Я принимаю <a class="policy" target="_blank" href="https://tilda.cc/ru/privacy-generator/">условия передачи информации</a> и <a class="policy" target="_blank" href="https://tilda.cc/ru/privacy-generator/">политику конфиденциальности</a>
                                 span.ico-input
                                     img.ico-input-check(src="static/images/general/checkbox.png")
                                     img.ico-input-checked(src="static/images/general/checkbox_checked.png")
