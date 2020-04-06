@@ -174,7 +174,10 @@
 // three
 @media(max-width: 1400px) {
   .section-three {
-    background: url("/static/images/content/video-bg-6.jpg") no-repeat;
+    //background: url("static/images/content/video-bg-6.jpg") no-repeat;
+    //background-size: cover;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(77,40,143,1) 45%, rgba(4,4,57,1) 100%);
   }
   .content-three .title {
     margin: 20px 0;

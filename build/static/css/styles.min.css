@@ -1269,6 +1269,15 @@ input {
   transform: rotate(180deg);
 }
 
+.pic-wrapp-three {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .content-four {
   position: absolute;
   top: 0;
@@ -1949,7 +1958,8 @@ input[type="checkbox"]:checked + label .ico-input .ico-input-checked {
 
 @media (max-width: 1400px) {
   .section-three {
-    background: url("/static/images/content/video-bg-6.jpg") no-repeat;
+    background: #020024;
+    background: linear-gradient(90deg, #020024 0%, #4d288f 45%, #040439 100%);
   }
   .content-three .title {
     margin: 20px 0;
